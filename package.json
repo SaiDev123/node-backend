@@ -23,8 +23,12 @@
   },
   "homepage": "https://github.com/SaiDev123/node-backend#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.11.7"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.7",
+    "sendgrid": "^5.2.3",
+    "sendgrid-web": "0.0.5"
   }
 }
