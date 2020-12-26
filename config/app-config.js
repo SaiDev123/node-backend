@@ -6,5 +6,5 @@
      SERVICE_PROVIDER:"SendGrid",
      SENDER_EMAIL: "saikumar@digital-lync.com"
     //MONGO_URL:"mongodb+srv://user1:Pwd@1@cluster0.61xks.mongodb.net/ecommerce?retryWrites=true&w=majority",
-})
+});
 module.exports=config;

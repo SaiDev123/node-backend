@@ -11,6 +11,7 @@ var app=express();
 
 //middlewares
 app.use(express.json());
+app.use(cors());
 
 //Connecting to DB
 DBConnect.connectToDB();
