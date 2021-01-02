@@ -19,6 +19,10 @@ var UserSchema= new Schema(
            unique:true,
            required:true,
            index:true
+       },
+       role: {
+           type:String,
+           default:"customer"
        }
     }
 );

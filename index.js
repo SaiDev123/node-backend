@@ -3,6 +3,7 @@ var cors = require('cors');
 var mongoose = require('mongoose');
 
 var userRoute=require('./routes/user.route');
+var productRoute=require('./routes/product.route');
 var Config=require('./config/app-config');
 var DBConnect=require('./config/db.config');
 
@@ -24,6 +25,7 @@ response.send("<h1>Application is up and running </h1>");
 // routes configuration
 
 app.use(userRoute);
+app.use(productRoute);
 
 //error handling middleware
 app.use((error,request,response,next) => {

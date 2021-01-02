@@ -44,7 +44,7 @@ exports.register=(req,res) =>{
 exports.login= function(req,res) {
 
      var user=req.body;
-
+     console.log('user',user);
      UserModel.findOne({emailId:user.emailId},(err,doc) => {
 
         console.log('doc',doc);
@@ -53,7 +53,9 @@ exports.login= function(req,res) {
              res.send({error:err.message})
          }
          if(doc){
-
+                if(doc.role != user.role){
+                    res.status(401).send("Unauthorized access"); 
+                }
              if(doc.password === user.password){
 
             var payload= {
