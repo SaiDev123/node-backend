@@ -8,6 +8,8 @@ exports.register=(req,res) =>{
 
     var user=req.body;
 
+    console.log("user",user);
+
       var newUser=new UserModel(user);
 
       newUser.save((err,doc) =>{

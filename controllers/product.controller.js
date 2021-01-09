@@ -12,3 +12,14 @@ var product= request.body;
      }
  })
 }
+exports.getProducts=function(request,response){
+    productModel.find({}, function(err,products){
+        if(err){
+            response.send({error:err.message})
+        }
+        else
+        {
+          response.send(products);
+        }
+    })
+}

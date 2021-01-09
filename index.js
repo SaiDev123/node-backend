@@ -29,6 +29,7 @@ app.use(productRoute);
 
 //error handling middleware
 app.use((error,request,response,next) => {
+    console.log(error);
     response.send("something wrong! please try later");
 })
 
@@ -36,3 +37,7 @@ app.listen(Config.PORT,() => {
     console.log("server started! on "+Config.PORT);
 })
 
+
+
+
+//http://127.0.0.1:5500/5Jan2021/register.html
